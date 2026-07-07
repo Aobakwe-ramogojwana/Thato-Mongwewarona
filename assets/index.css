@@ -355,9 +355,9 @@
 
 .portal-step__item:nth-child(2)::before { background-image: url("./Upload logo.png"); }
 
-.portal-step__item:nth-child(3)::before { background-image: url("./Download project.png"); }
+.portal-step__item:nth-child(3)::before { background-image: url("./Request service.png"); }
 
-.portal-step__item:nth-child(4)::before { background-image: url("./Request service.png"); }
+.portal-step__item:nth-child(4)::before { background-image: url("./Download project.png"); }
 
 .portal-step__item:nth-child(5)::before { background-image: url("./Download Project 2.png"); }
 
@@ -367,7 +367,7 @@
 .portal-step__item--4::before { background-image: url("./Download project.png") !important; }
 .portal-step__item--5::before { background-image: url("./Download Project 2.png") !important; }
 
-.portal-step__number { position: absolute; top: 0.75rem; right: 0.75rem; left: auto; transform: none; z-index: 2; font-size: var(--font-size-4xl); font-family: var(--font-family-heading); font-weight: var(--font-weight-heading); color: rgb(255, 255, 255); line-height: 1; -webkit-text-stroke: 1px rgba(0,0,0,0.3); }
+.portal-step__number { display: none !important; position: absolute; top: 0.75rem; right: 0.75rem; left: auto; transform: none; z-index: 2; font-size: var(--font-size-4xl); font-family: var(--font-family-heading); font-weight: var(--font-weight-heading); color: rgb(255, 255, 255); line-height: 1; -webkit-text-stroke: 1px rgba(0,0,0,0.3); }
 
 .portal-steps__names-row { display: none; }
 
