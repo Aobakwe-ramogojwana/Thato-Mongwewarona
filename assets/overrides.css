@@ -20,6 +20,14 @@
   justify-content: center !important;
 }
 
+/* Big bold stacked hero heading, like the reference pic */
+.hero-title {
+  font-size: clamp(3rem, 9vw, 6.5rem) !important;
+  font-weight: 900 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.01em !important;
+}
+
 /* ---- 1. NAVIGATION ---------------------------------------- */
 
 /* Nav background: deep maroon so it reads as a proper brand bar */
