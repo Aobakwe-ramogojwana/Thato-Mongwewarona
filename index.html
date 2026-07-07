@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mongwewarona Visuals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css2">
+    <link rel="stylesheet" href="./assets/style_backup.css">
+    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="stylesheet" href="./assets/fixes.css">
+    <link rel="stylesheet" href="./assets/overrides.css">
+</head>
+<body>
+    <div class="home-container1">
+
+        <!-- Navigation -->
+        <nav class="navigation-wrapper">
+            <div class="navigation-container">
+                <a href="index.html#home" class="navigation-logo-link">
+                    <img src="./assets/Final stage logo.png" alt="Logo" class="navigation-logo-img">
+                    <span class="navigation-brand-name">Mongwewarona Visuals</span>
+                </a>
+                <ul class="navigation-desktop-menu navigation-links-list">
+                    <li><a href="index.html#home" class="navigation-link">Home</a></li>
+                    <li><a href="index.html#services" class="navigation-link">Services</a></li>
+                    <li><a href="index.html#contact" class="navigation-link">Contact</a></li>
+                    <li><a href="client.html" class="navigation-link">Client Account</a></li>
+                    <li>
+                        <button class="navigation-search-btn" aria-label="Search" id="searchToggle">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div class="navigation-search-panel" id="searchPanel">
+                    <input type="text" class="navigation-search-input" id="searchInput" placeholder="Search..." autocomplete="off">
+                    <div class="navigation-search-results" id="searchResults"></div>
+                </div>
+                <button class="navigation-mobile-toggle" aria-label="Open menu" id="mobileMenuToggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile menu overlay -->
+        <div class="navigation-mobile-overlay" id="mobileMenuOverlay">
+            <div class="navigation-mobile-header">
+                <a href="index.html#home" class="navigation-logo-link">
+                    <img src="./assets/Final stage logo.png" alt="Logo" class="navigation-logo-img">
+                    <span class="navigation-brand-name">Mongwewarona Visuals</span>
+                </a>
+                <button class="navigation-mobile-close" aria-label="Close menu" id="mobileMenuClose">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="navigation-mobile-content">
+                <ul class="navigation-mobile-links">
+                    <li><a href="index.html#home" class="navigation-mobile-link">Home</a></li>
+                    <li><a href="index.html#services" class="navigation-mobile-link">Services</a></li>
+                    <li><a href="index.html#contact" class="navigation-mobile-link">Contact</a></li>
+                    <li><a href="client.html" class="navigation-mobile-link">Client Account</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Hero -->
+        <section class="hero-intro" id="home">
+            <div class="hero-intro__video-wrapper hero-intro__video-wrapper--fallback">
+                <img src="./assets/creative-team-collaborating-office.jpg" alt="Creative team collaborating" class="hero-intro__video">
+            </div>
+            <div class="hero-intro__overlay"></div>
+            <div class="hero-intro__content">
+                <h1 class="hero-title">Creative<br>Digital<br>Marketing<br>Agency</h1>
+                <p class="hero-subtitle">Elevating brands through visual excellence</p>
+                <div class="hero-intro__actions">
+                    <a href="why.html" class="btn btn-accent"><span>Learn more</span></a>
+                    <a href="client.html" class="btn btn-outline hero-intro__btn-outline"><span>Sign in</span></a>
+                </div>
+            </div>
+            <div class="hero-intro__dots">
+                <span class="hero-dot active"></span>
+                <span class="hero-dot"></span>
+                <span class="hero-dot"></span>
+            </div>
+            <div class="hero-social-icons">
+                <a href="#" class="hero-social-icon" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+                </a>
+                <a href="#" class="hero-social-icon" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+                </a>
+                <a href="#" class="hero-social-icon" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Our Creative Solutions -->
+        <section class="service-highlights" id="services">
+            <div class="service-highlights__container">
+                <div class="service-highlights__header">
+                    <h2 class="section-title">Our Creative Solutions</h2>
+                    <p class="section-content" style="color:#000000;">Tap a service to view pricing and request it in the client portal.</p>
+                </div>
+                <div class="service-highlights__grid">
+                    <a href="client.html?service=Social%20Media%20Management" class="service-highlights__card">
+                        <span class="service-highlights__item service-card--social">
+                            <span class="service-numbering__number"><span>01</span></span>
+                        </span>
+                        <h3 class="service-name-label">Social Media Management</h3>
+                    </a>
+                    <a href="client.html?service=Content%20Creation" class="service-highlights__card">
+                        <span class="service-highlights__item service-card--content">
+                            <span class="service-numbering__number"><span>02</span></span>
+                        </span>
+                        <h3 class="service-name-label">Content Creation</h3>
+                    </a>
+                    <a href="client.html?service=Video%20Editing" class="service-highlights__card">
+                        <span class="service-highlights__item service-card--video">
+                            <span class="service-numbering__number"><span>03</span></span>
+                        </span>
+                        <h3 class="service-name-label">Video Editing</h3>
+                    </a>
+                    <a href="client.html?service=Web%20Development" class="service-highlights__card">
+                        <span class="service-highlights__item service-card--web">
+                            <span class="service-numbering__number"><span>04</span></span>
+                        </span>
+                        <h3 class="service-name-label">Web Development</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet our creative team -->
+        <section class="get-started" id="team">
+            <h2 class="meet-team__title section-title">Meet our <span style="color:#cc0000;">C</span>reative <span style="color:#cc0000;">T</span>eam</h2>
+            <div class="get-started__container">
+                <div class="get-started__card">
+<div class="get-started__visual">
+                         <img src="./assets/creative director.png" alt="Thato Mongwewarona" class="get-started__img">
+                     </div>
+                    <div class="get-started__content">
+                        <p class="meet-team__quote">"Welcome to Mongwewarona Visuals, a creative<br>media and digital solutions agency based in Gaborone,<br>dedicated to elevating brands through visual excellence,<br>building brands that speak, systems that work, and content<br>that connects. We specialize in social media management,<br>content creation, video editing, and web development<br>that help businesses grow, communicate effectively,<br>and strengthen their digital presence. Looking<br>forward to work with you"</p>
+                        <p class="meet-team__name">Thato Mongwewarona, Creative Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-wrapper" id="contact">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-nav-column">
+                        <h4 class="footer-column-title">Quick Links</h4>
+                        <ul class="footer-list">
+                            <li class="footer-list-item"><a href="index.html#home" class="footer-link">Home</a></li>
+                            <li class="footer-list-item"><a href="index.html#services" class="footer-link">Services</a></li>
+                            <li class="footer-list-item"><a href="index.html#contact" class="footer-link">Contact</a></li>
+                            <li class="footer-list-item"><a href="client.html" class="footer-link">Client Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h4 class="footer-column-title">Our Services</h4>
+                        <ul class="footer-list">
+                            <li class="footer-list-item"><a href="client.html?service=Social%20Media%20Management" class="footer-link">Social Media Management</a></li>
+                            <li class="footer-list-item"><a href="client.html?service=Content%20Creation" class="footer-link">Content Creation</a></li>
+                            <li class="footer-list-item"><a href="client.html?service=Video%20Editing" class="footer-link">Video Editing</a></li>
+                            <li class="footer-list-item"><a href="client.html?service=Web%20Development" class="footer-link">Web Development &amp; Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h4 class="footer-column-title">Others</h4>
+                        <ul class="footer-list">
+                            <li class="footer-list-item"><a href="why.html" class="footer-link">Why Digital Marketing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social-links">
+                    <a href="#" class="footer-social-icon" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+                    </a>
+                    <a href="#" class="footer-social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+                    </a>
+                    <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                    </a>
+                    <a href="https://wa.me/26774008137" class="footer-social-icon" aria-label="WhatsApp" target="_blank">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.434-9.891-9.881-9.891-5.448 0-9.884 4.434-9.884 9.884 0 5.462 4.434 9.89 9.884 9.89 2.056 0 3.98-.566 5.597-1.759l-3.303-1.68z"></path></svg>
+                    </a>
+                    <a href="mailto:mongwewaronat07@gmail.com" class="footer-social-icon" aria-label="Email">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"></path></svg>
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-copyright">&copy; 2026 Mongwewarona Visuals. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="./assets/search.js"></script>
+    <script src="./assets/mobile-nav.js"></script>
+</body>
+</html>

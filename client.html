@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal - Mongwewarona Visuals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="stylesheet" href="./assets/style_backup.css">
+    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="stylesheet" href="./assets/portal.css">
+    <link rel="stylesheet" href="./assets/overrides.css">
+</head>
+<body>
+    <div class="portal-page">
+        <nav class="navigation-wrapper">
+            <div class="navigation-container">
+                <a href="./index.html#home" class="navigation-logo-link">
+                    <img src="./assets/Final stage logo.png" alt="Mongwewarona Visuals logo" class="navigation-logo-img">
+                    <span class="navigation-brand-name">Mongwewarona Visuals</span>
+                </a>
+                <ul class="navigation-desktop-menu navigation-links-list">
+                    <li><a href="./index.html#home" class="navigation-link">Home</a></li>
+                    <li><a href="./index.html#services" class="navigation-link">Services</a></li>
+                    <li><a href="./index.html#contact" class="navigation-link">Contact</a></li>
+                    <li><a href="./client.html" class="navigation-link">Client Account</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="portal-main">
+
+            <!-- ===================== AUTH (Sign up / Log in) ===================== -->
+            <section id="authView" class="portal-hero-section">
+                <div class="portal-hero">
+                    <h1>Client Portal</h1>
+                    <p>Sign up, request a service, and track your project &mdash; all in one place.</p>
+                </div>
+
+                <div class="portal-grid">
+                    <div class="portal-card">
+                        <div class="portal-tabs">
+                            <button id="tabLogin" class="portal-tab is-active" type="button">Log In</button>
+                            <button id="tabSignup" class="portal-tab" type="button">Sign Up</button>
+                        </div>
+
+                        <!-- LOGIN FORM -->
+                        <form id="loginForm" class="portal-form">
+                            <div class="portal-field">
+                                <label for="loginEmail">Email address</label>
+                                <input id="loginEmail" class="portal-input" type="email" name="email" autocomplete="username" required>
+                            </div>
+                            <div class="portal-field">
+                                <label for="loginPassword">Password</label>
+                                <input id="loginPassword" class="portal-input" type="password" name="password" autocomplete="current-password" required>
+                            </div>
+                            <div class="portal-field portal-field--inline">
+                                <a href="#" id="forgotPasswordLink" class="portal-link-forgot">Forgot password?</a>
+                            </div>
+                            <button class="btn btn-accent btn-lg" type="submit"><span>Log In</span></button>
+                            <div id="loginMessage" class="portal-message" aria-live="polite"></div>
+                            <div id="forgotPasswordView" class="portal-forgot-view" hidden>
+                                <div class="portal-field">
+                                    <label for="forgotEmail">Email address</label>
+                                    <input id="forgotEmail" class="portal-input" type="email" name="forgotEmail" autocomplete="email">
+                                </div>
+                                <button id="resetPasswordBtn" class="btn btn-accent btn-lg" type="button"><span>Reset Password</span></button>
+                                <div id="forgotPasswordMessage" class="portal-message" aria-live="polite"></div>
+                                <a href="#" id="backToLogin" class="portal-link-back">Back to Log In</a>
+                            </div>
+                        </form>
+
+                        <!-- SIGN UP FORM -->
+                        <form id="signupForm" class="portal-form" hidden>
+                            <div class="portal-field">
+                                <label for="signupName">Full name</label>
+                                <input id="signupName" class="portal-input" type="text" name="name" autocomplete="name" required>
+                            </div>
+                            <div class="portal-field">
+                                <label for="signupEmail">Email address</label>
+                                <input id="signupEmail" class="portal-input" type="email" name="email" autocomplete="username" required>
+                            </div>
+                            <div class="portal-field">
+                                <label for="signupPassword">Password</label>
+                                <input id="signupPassword" class="portal-input" type="password" name="password" autocomplete="new-password" minlength="6" required>
+                            </div>
+                            <button class="btn btn-accent btn-lg" type="submit"><span>Create Account</span></button>
+                            <div id="signupMessage" class="portal-message" aria-live="polite"></div>
+                        </form>
+                </div>
+            </div>
+        </section>
+
+            <!-- ===================== CLIENT DASHBOARD ===================== -->
+            <section id="clientView" class="portal-dashboard" hidden>
+                <div class="portal-card portal-dashboard-header">
+                    <div>
+                        <h2 id="clientWelcome">Welcome</h2>
+                        <p id="clientSubtitle" class="portal-note"></p>
+                    </div>
+                    <button id="clientLogoutButton" class="btn btn-outline btn-sm" type="button"><span>Log out</span></button>
+                </div>
+
+                <!-- Logo upload -->
+                <div class="portal-card">
+                    <h3>Your brand logo</h3>
+                    <p class="portal-note">Upload your logo and we'll use it across your project materials.</p>
+                    <div class="portal-logo-section">
+                        <div class="portal-logo-preview-wrap">
+                            <img id="logoPreview" src="" alt="Your logo" class="portal-logo-preview" hidden>
+                            <div id="logoPlaceholder" class="portal-logo-placeholder">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9l4-4 4 4 4-6 4 4"/><circle cx="8.5" cy="8.5" r="1.5"/></svg>
+                                <span>No logo yet</span>
+                            </div>
+                        </div>
+                        <div class="portal-logo-controls">
+                            <input id="logoUploadInput" type="file" accept="image/png,image/jpeg,image/jpg,image/svg+xml,image/webp" style="display:none;">
+                            <button id="logoUploadButton" class="btn btn-accent" type="button"><span>Upload logo</span></button>
+                            <p class="portal-note" style="margin:0.5rem 0 0;">PNG, JPG, SVG or WebP — max 2MB</p>
+                        </div>
+                    </div>
+                    <div id="logoMessage" class="portal-message" aria-live="polite"></div>
+                </div>
+
+                <!-- Service catalogue -->
+                <div class="portal-card">
+                    <h3>Our Creative Solutions</h3>
+                    <p class="portal-note">Pick a service to see pricing and request a package.</p>
+                    <div class="portal-service-grid">
+                        <button class="portal-service-tile" data-service="Social Media Management" type="button">
+                            <span class="portal-service-tile__num">01</span>
+                            <span class="portal-service-tile__name">Social Media Management</span>
+                        </button>
+                        <button class="portal-service-tile" data-service="Content Creation" type="button">
+                            <span class="portal-service-tile__num">02</span>
+                            <span class="portal-service-tile__name">Content Creation</span>
+                        </button>
+                        <button class="portal-service-tile" data-service="Video Editing" type="button">
+                            <span class="portal-service-tile__num">03</span>
+                            <span class="portal-service-tile__name">Video Editing</span>
+                        </button>
+                        <button class="portal-service-tile" data-service="Web Development" type="button">
+                            <span class="portal-service-tile__num">04</span>
+                            <span class="portal-service-tile__name">Web Development</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pricing panel (shown after a service tile is clicked) -->
+                <div id="pricingPanel" class="portal-card" hidden>
+                    <div class="portal-panel-header">
+                        <h3 id="pricingServiceName">Service</h3>
+                        <button id="closePricingButton" class="btn btn-outline btn-sm" type="button"><span>Back</span></button>
+                    </div>
+                    <div id="pricingGrid" class="portal-pricing-grid"></div>
+                    <div id="pricingMessage" class="portal-message" aria-live="polite"></div>
+                </div>
+
+                <!-- Contract panel (shown right after a request is created) -->
+                <div id="contractPanel" class="portal-card" hidden>
+                    <h3>Your service agreement</h3>
+                    <p class="portal-note">We've drafted this automatically based on the package you chose. Review it, then accept to confirm your request.</p>
+                    <pre id="contractText" class="portal-contract"></pre>
+                    <div class="portal-field">
+                        <label>5. PROJECT GOAL</label>
+                        <label class="portal-checkbox-label"><input type="checkbox" class="portal-goal-checkbox" value="Attract more clients"> Attract more clients</label>
+                        <label class="portal-checkbox-label"><input type="checkbox" class="portal-goal-checkbox" value="Improve brand visibility"> Improve brand visibility</label>
+                        <label class="portal-checkbox-label"><input type="checkbox" class="portal-goal-checkbox" value="Redesign our website"> Redesign our website</label>
+                        <label class="portal-checkbox-label"><input type="checkbox" class="portal-goal-checkbox" value="Launch a new product"> Launch a new product</label>
+                        <label class="portal-checkbox-label"><input type="checkbox" class="portal-goal-checkbox" value="Create professional brand identity"> Create professional brand identity</label>
+                        <label class="portal-checkbox-label"><input type="checkbox" class="portal-goal-checkbox" value="Improve customer engagement"> Improve customer engagement</label>
+                        <label class="portal-checkbox-label"><input type="checkbox" class="portal-goal-checkbox" value="Other"> Other</label>
+                        <input id="projectGoalOther" class="portal-input" type="text" placeholder="Please specify" style="margin-top:0.5rem; display:none;">
+                    </div>
+                    <div class="portal-field">
+                        <label for="signName">Type your full name to sign</label>
+                        <input id="signName" class="portal-input" type="text" placeholder="Full name">
+                    </div>
+                    <div class="portal-actions">
+                        <button id="acceptContractButton" class="btn btn-accent" type="button"><span>Accept &amp; Sign</span></button>
+                        <button id="declineContractButton" class="btn btn-outline" type="button"><span>Cancel request</span></button>
+                    </div>
+                    <div id="contractMessage" class="portal-message" aria-live="polite"></div>
+                </div>
+
+                <!-- My requests -->
+                <div class="portal-card">
+                    <h3>My service requests</h3>
+                    <ul id="requestList" class="portal-project-list"></ul>
+                </div>
+
+                <!-- My projects -->
+                <div class="portal-card">
+                    <h3>My projects</h3>
+                    <ul id="clientProjectList" class="portal-project-list"></ul>
+                </div>
+            </section>
+
+            <!-- ===================== ADMIN DASHBOARD ===================== -->
+            <section id="adminView" class="portal-dashboard" hidden>
+                <div class="portal-card portal-dashboard-header">
+                    <div>
+                        <h2 id="adminWelcome">Welcome</h2>
+                        <p class="portal-note">Administrator access</p>
+                    </div>
+                    <button id="adminLogoutButton" class="btn btn-outline btn-sm" type="button"><span>Log out</span></button>
+                </div>
+
+                <div class="portal-section">
+                    <div class="portal-card">
+                        <h3>Clients</h3>
+                        <div class="portal-stats">
+                            <div class="portal-stat">
+                                <strong id="adminClientCount">0</strong>
+                                <span>Accounts</span>
+                            </div>
+                            <div class="portal-stat">
+                                <strong id="adminRequestCount">0</strong>
+                                <span>Requests</span>
+                            </div>
+                            <div class="portal-stat">
+                                <strong id="adminProjectCount">0</strong>
+                                <span>Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portal-card">
+                        <h3>All client accounts</h3>
+                        <ul id="adminClientList" class="portal-project-list portal-scroll"></ul>
+                    </div>
+                </div>
+
+                <div class="portal-card">
+                    <h3>Service requests</h3>
+                    <p class="portal-note">Review what each client has requested. Accept a request to turn it into a tracked project.</p>
+                    <ul id="adminRequestList" class="portal-project-list"></ul>
+                </div>
+
+                <div class="portal-card">
+                    <h3>Projects &mdash; update progress</h3>
+                    <ul id="adminProjectList" class="portal-project-list"></ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="portal-footer">
+            <span>&copy; 2026 Mongwewarona Visuals. Client portal data is securely stored with Supabase.</span>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="./assets/supabase-config.js"></script>
+    <script src="./assets/contract-template.js"></script>
+    <script src="./assets/portal.js"></script>
+</body>
+</html>

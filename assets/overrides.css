@@ -1,0 +1,342 @@
+/* ============================================================
+   Mongwewarona Visuals — Visibility & polish overrides
+   Fixes all color/contrast issues without touching core CSS
+   ============================================================ */
+
+/* ---- 0. HERO — center heading, subtitle, and buttons ------ */
+
+.hero-intro {
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.hero-intro__content {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.hero-intro__actions {
+  justify-content: center !important;
+}
+
+/* ---- 1. NAVIGATION ---------------------------------------- */
+
+/* Nav background: deep maroon so it reads as a proper brand bar */
+.navigation-wrapper {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+/* Logo image — make it bigger and visible */
+.navigation-logo-img {
+  width: 44px !important;
+  height: 44px !important;
+  object-fit: contain !important;
+  background: transparent !important;
+}
+
+/* Brand name — dark on white nav */
+.navigation-brand-name {
+  color: #1a0000 !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Nav links — dark on white nav */
+.navigation-link {
+  color: #1a0000 !important;
+  font-weight: 500 !important;
+}
+
+.navigation-link:hover {
+  color: #028a99 !important;
+}
+
+.navigation-link::after {
+  background: #028a99 !important;
+}
+
+
+
+/* ---- 2. SERVICE TILES — name labels below grid ------------ */
+
+.service-name-label {
+  color: #1a0000 !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+
+/* ---- 3. CLIENT PORTAL SECTION ----------------------------- */
+
+/* The get-started__card sets color: white (for dark cards) but
+   the portal and team sections have transparent cards,
+   making text invisible. Fix by resetting on those sections. */
+
+#portal .get-started__card,
+#team .get-started__card {
+  color: #1a0000 !important;
+}
+
+#portal .client-portal__caption {
+  color: #1a0000 !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+#portal .client-portal__heading {
+  color: #1a0000 !important;
+}
+
+.portal-numbering__number {
+  color: #330000 !important;
+  opacity: 0.25 !important;
+}
+
+/* ---- 4. MEET OUR CREATIVE TEAM ---------------------------- */
+
+.meet-team__quote {
+  color: #1a0000 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.85 !important;
+  /* Remove forced line-breaks — let it flow naturally */
+}
+
+.meet-team__name {
+  color: #330000 !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-top: 1.25rem !important;
+}
+
+/* The team card content area */
+#team .get-started__content {
+  color: #1a0000 !important;
+}
+
+/* Team section — card like Connect With Us */
+#team {
+  background: #ffffff !important;
+}
+
+#team .get-started__card {
+  background: #ffffff !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 40px !important;
+}
+
+#team .get-started__visual {
+  background: #ffffff !important;
+}
+
+#team .get-started__content {
+  background: #ffffff !important;
+}
+
+#team .meet-team__title {
+  color: #cc0000 !important;
+}
+
+/* ---- 5. CONNECT WITH US ----------------------------------- */
+
+/* Card background stays white; make all text dark */
+#contact .get-started__card {
+  background: #ffffff !important;
+}
+
+#contact .get-started__content {
+  color: #1a0000 !important;
+}
+
+/* "Connect With Us" heading — already #cc0000 via scoped rule, keep it */
+#contact .section-title {
+  color: #cc0000 !important;
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  line-height: 1.05 !important;
+}
+
+/* Tagline under the heading */
+#contact .section-content {
+  color: #1a0000 !important;
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
+}
+
+/* Buttons in the contact section */
+#contact .btn-accent {
+  background: #330000 !important;
+  color: #ffffff !important;
+  border-color: #330000 !important;
+}
+
+#contact .btn-accent span {
+  color: #ffffff !important;
+}
+
+#contact .btn-accent:hover {
+  background: #550000 !important;
+  border-color: #550000 !important;
+}
+
+/* ---- 6. FOOTER -------------------------------------------- */
+
+.footer-wrapper {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+.footer-column-title {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Red underline decoration under footer headings — removed per request */
+.footer-column-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ---- 6b. MOBILE MENU --------------------------------------- */
+/* Keep it always in flex layout (off-screen via transform) so the
+   slide-in transition actually animates instead of popping in.
+   z-index must beat the sticky nav (9999) or its hamburger button
+   stays visible on top of the close (X) button. */
+.navigation-mobile-overlay {
+  display: flex !important;
+  z-index: 10050 !important;
+}
+
+.footer-link {
+  color: rgba(255,255,255,0.75) !important;
+  font-size: 0.92rem !important;
+  text-decoration: none !important;
+  transition: color 0.2s !important;
+}
+
+.footer-link:hover {
+  color: #028a99 !important;
+}
+
+.footer-list-item {
+  padding: 0.2rem 0 !important;
+}
+
+/* Social icons */
+.footer-social-icon {
+  width: 42px !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  border-radius: 50% !important;
+  text-decoration: none !important;
+  transition: background 0.25s, color 0.25s !important;
+}
+
+.footer-social-icon:hover {
+  background: #028a99 !important;
+  border-color: #028a99 !important;
+  color: #ffffff !important;
+}
+
+.footer-social-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* Footer divider line above copyright — removed per request */
+.footer-bottom {
+  margin-top: 2rem !important;
+  padding-top: 1.5rem !important;
+}
+
+.footer-copyright {
+  color: rgba(255,255,255,0.5) !important;
+  font-size: 0.85rem !important;
+  margin: 0 !important;
+}
+
+/* Footer top grid — a bit of breathing room */
+.footer-top {
+  padding-top: 1rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+/* ---- 7. SEARCH PANEL — match white nav -------------------- */
+
+.navigation-search-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.12) !important;
+  border-radius: 12px !important;
+  padding: 0.5rem !important;
+}
+
+.navigation-search-input {
+  background: #f5f5f5 !important;
+  color: #1a0000 !important;
+  border-color: rgba(0,0,0,0.15) !important;
+}
+
+.navigation-search-input::placeholder {
+  color: rgba(0,0,0,0.45) !important;
+}
+
+.navigation-search-results {
+  background: #ffffff !important;
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+.search-result-item {
+  color: #1a0000 !important;
+  border-bottom-color: rgba(0,0,0,0.08) !important;
+}
+
+.search-result-item:hover {
+  background: rgba(0,0,0,0.04) !important;
+}
+
+.search-result-title {
+  color: #028a99 !important;
+}
+
+.search-result-snippet {
+  color: rgba(0,0,0,0.6) !important;
+}
+
+/* ---- 8. GENERAL section-title fallback -------------------- */
+/* Any section-title not already scoped gets a safe dark color */
+.section-title {
+  color: #1a0000;
+}
+
+/* Footer must actually stack on mobile — the wider-breakpoint
+   "span 2" on the 3rd column was never reset, so two columns were
+   still fighting for space instead of a clean single-column stack. */
+@media (max-width: 767px) {
+  .footer-nav-column:nth-child(3) {
+    grid-column: span 1 !important;
+  }
+}
+
+/* The team card forces a row layout at all widths (higher
+   specificity than the general 991px stacking rule) which breaks
+   on mobile. Let it stack like every other card there. */
+@media (max-width: 767px) {
+  #team .get-started__card {
+    flex-direction: column !important;
+    min-height: auto !important;
+    text-align: center !important;
+  }
+
+  #team .get-started__visual {
+    flex: 0 0 auto !important;
+  }
+}
+
