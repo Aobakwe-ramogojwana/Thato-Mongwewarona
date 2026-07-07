@@ -90,7 +90,7 @@
 
 .thq-icon-x-small { width: var(--dl-layout-size-xsmall); height: var(--dl-layout-size-xsmall); }
 
-.thq-link { cursor: pointer; display: inline-block; overflow: hidden; background-image: ; background-repeat: ; background-attachment: ; background-origin: ; background-color: ; transition: background-position 300ms; font-weight: 600; background-clip: text; background-size: 200% 100%; background-position: 100% center; -webkit-text-fill-color: transparent; }
+.thq-link { cursor: pointer; display: inline-block; overflow: hidden; transition: background-position 300ms; font-weight: 600; background-clip: text; background-size: 200% 100%; background-position: 100% center; -webkit-text-fill-color: transparent; }
 
 .thq-link:hover { background-position: 0px 100%; }
 
