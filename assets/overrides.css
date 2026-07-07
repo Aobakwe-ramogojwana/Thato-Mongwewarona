@@ -3,21 +3,21 @@
    Fixes all color/contrast issues without touching core CSS
    ============================================================ */
 
-/* ---- 0. HERO — center heading, subtitle, and buttons ------ */
+/* ---- 0. HERO — left-aligned exactly like the reference screenshot ------ */
 
 .hero-intro {
-  justify-content: center !important;
-  text-align: center !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
 }
 
 .hero-intro__content {
-  margin-left: auto !important;
+  margin-left: 0 !important;
   margin-right: auto !important;
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .hero-intro__actions {
-  justify-content: center !important;
+  justify-content: flex-start !important;
 }
 
 /* Big bold stacked hero heading — like the reference pic: huge, full-width, bold */
@@ -109,7 +109,7 @@
   color: #1a0000 !important;
   font-size: 1.05rem !important;
   line-height: 1.85 !important;
-  /* Remove forced line-breaks — let it flow naturally */
+  text-align: left !important;
 }
 
 .meet-team__name {
@@ -451,7 +451,7 @@ html, body {
   }
 
   .portal-step__item::before {
-    background-size: cover !important;
+    background-size: contain !important;
     background-position: center !important;
   }
 
