@@ -98,9 +98,9 @@
   color: #1a0000 !important;
 }
 
+.portal-step__number,
 .portal-numbering__number {
-  color: #330000 !important;
-  opacity: 0.25 !important;
+  display: none !important;
 }
 
 /* ---- 4. MEET OUR CREATIVE TEAM ---------------------------- */
