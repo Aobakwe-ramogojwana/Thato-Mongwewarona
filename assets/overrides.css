@@ -3,21 +3,30 @@
    Fixes all color/contrast issues without touching core CSS
    ============================================================ */
 
-/* ---- 0. HERO — center heading, subtitle, and buttons ------ */
+/* ---- 0. HERO — left-aligned exactly like the reference screenshot ------ */
 
 .hero-intro {
-  justify-content: center !important;
-  text-align: center !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
 }
 
 .hero-intro__content {
-  margin-left: auto !important;
+  margin-left: 0 !important;
   margin-right: auto !important;
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .hero-intro__actions {
-  justify-content: center !important;
+  justify-content: flex-start !important;
+}
+
+/* Big bold stacked hero heading — like the reference pic: huge, full-width, bold */
+.hero-title {
+  font-size: clamp(4.5rem, 16vw, 10rem) !important;
+  font-weight: 900 !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.02em !important;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4) !important;
 }
 
 /* ---- 1. NAVIGATION ---------------------------------------- */
@@ -89,9 +98,9 @@
   color: #1a0000 !important;
 }
 
+.portal-step__number,
 .portal-numbering__number {
-  color: #330000 !important;
-  opacity: 0.25 !important;
+  display: none !important;
 }
 
 /* ---- 4. MEET OUR CREATIVE TEAM ---------------------------- */
@@ -100,7 +109,7 @@
   color: #1a0000 !important;
   font-size: 1.05rem !important;
   line-height: 1.85 !important;
-  /* Remove forced line-breaks — let it flow naturally */
+  text-align: left !important;
 }
 
 .meet-team__name {
@@ -340,3 +349,237 @@
   }
 }
 
+/* =====================================================
+   COMPREHENSIVE MOBILE RESPONSIVE FIXES
+   ===================================================== */
+
+/* Prevent horizontal overflow / zoom-out blank page */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---- HERO: adapt padding on mobile so it doesn't push content off ---- */
+@media (max-width: 767px) {
+  .hero-intro {
+    padding: 6rem 1.5rem 3rem !important;
+    min-height: 100svh !important;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 17vw, 6rem) !important;
+    line-height: 0.92 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .hero-intro__dots {
+    right: 0.75rem !important;
+  }
+
+  .hero-social-icons {
+    gap: 0.75rem !important;
+  }
+}
+
+/* ---- SERVICES GRID: 2 cols on tablet, 1 col on mobile ---- */
+@media (max-width: 991px) {
+  .service-highlights__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-highlights__grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .service-highlights {
+    padding: 2.5rem 1rem !important;
+  }
+
+  .service-highlights__container {
+    padding: 0 1rem !important;
+  }
+}
+
+/* ---- CLIENT PORTAL STEPS: stack as image+label pairs on mobile ---- */
+@media (max-width: 991px) {
+  .portal-steps__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .portal-step__item {
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Portal section overall */
+  .get-started#portal {
+    padding: 2rem 1rem !important;
+  }
+
+  .client-portal__container {
+    padding: 0 0.75rem !important;
+  }
+
+  /* Stack portal steps as 2-column grid of image+label cards */
+  .portal-steps__grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .portal-step__card {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .portal-step__item {
+    height: 150px !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  .portal-step__item::before {
+    background-size: contain !important;
+    background-position: center !important;
+  }
+
+  .portal-step__name {
+    font-size: 0.82rem !important;
+    text-align: center !important;
+  }
+
+  .client-portal__header {
+    margin-bottom: 1.5rem !important;
+  }
+
+  #portal .client-portal__title {
+    font-size: 1.6rem !important;
+  }
+
+  .client-portal__heading {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* ---- TEAM SECTION MOBILE ---- */
+@media (max-width: 600px) {
+  .get-started {
+    padding: 2rem 1rem !important;
+  }
+
+  .get-started__content {
+    padding: 1.25rem !important;
+  }
+
+  .meet-team__quote {
+    font-size: 0.92rem !important;
+    line-height: 1.7 !important;
+  }
+
+  #team .get-started__visual .get-started__img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+/* ---- FOOTER MOBILE ---- */
+@media (max-width: 600px) {
+  .footer-top {
+    gap: 1.5rem !important;
+  }
+
+  .footer-container {
+    padding: 0 1rem 1.5rem !important;
+  }
+}
+
+/* ---- NAVIGATION MOBILE ---- */
+@media (max-width: 767px) {
+  .navigation-container {
+    padding: 0.5rem 1rem !important;
+  }
+
+  .navigation-mobile-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    color: #1a0000 !important;
+    padding: 0.4rem !important;
+  }
+
+  .navigation-wrapper {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+  }
+}
+
+/* ---- MOBILE OVERLAY MENU ---- */
+.navigation-mobile-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background: #ffffff !important;
+  flex-direction: column !important;
+  padding: 1.5rem !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.3s ease !important;
+  overflow-y: auto !important;
+}
+
+.navigation-mobile-overlay.is-active {
+  transform: translateX(0) !important;
+}
+
+.navigation-mobile-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 2rem !important;
+}
+
+.navigation-mobile-content {
+  flex: 1 !important;
+}
+
+.navigation-mobile-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navigation-mobile-link {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: #1a0000 !important;
+  text-decoration: none !important;
+  font-family: Montserrat, sans-serif !important;
+}
+
+.navigation-mobile-link:hover {
+  color: #cc0000 !important;
+}
+
+/* ---- PREVENT page from going blank when rotating / resizing ---- */
+.home-container1 {
+  min-height: 100vh !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+}

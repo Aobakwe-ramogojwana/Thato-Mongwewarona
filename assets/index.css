@@ -90,7 +90,7 @@
 
 .thq-icon-x-small { width: var(--dl-layout-size-xsmall); height: var(--dl-layout-size-xsmall); }
 
-.thq-link { cursor: pointer; display: inline-block; overflow: hidden; background-image: ; background-repeat: ; background-attachment: ; background-origin: ; background-color: ; transition: background-position 300ms; font-weight: 600; background-clip: text; background-size: 200% 100%; background-position: 100% center; -webkit-text-fill-color: transparent; }
+.thq-link { cursor: pointer; display: inline-block; overflow: hidden; transition: background-position 300ms; font-weight: 600; background-clip: text; background-size: 200% 100%; background-position: 100% center; -webkit-text-fill-color: transparent; }
 
 .thq-link:hover { background-position: 0px 100%; }
 
@@ -342,25 +342,34 @@
 
 .service-name-label { color: rgb(51, 0, 0); font-size: var(--font-size-lg); font-weight: 500; font-family: Montserrat, sans-serif; text-align: center; margin: 0px; }
 
-.portal-steps__grid { gap: var(--spacing-4xl); display: grid; grid-template-columns: repeat(5, 1fr); }
+.portal-steps__grid { gap: var(--spacing-xl); display: grid; grid-template-columns: repeat(5, 1fr); }
+
+.portal-step__card { display: flex; flex-direction: column; gap: 0.75rem; }
 
 .portal-step__item { border: 1px solid transparent; padding: 0px; transition: transform 0.3s, box-shadow 0.3s; border-radius: var(--border-radius-card); text-align: center; display: flex; flex-direction: column; overflow: hidden; aspect-ratio: auto; height: 320px; position: relative; }
 
 .portal-step__item::before { content: ""; position: absolute; inset: 0px; background-size: contain; background-position: center center; background-repeat: no-repeat; z-index: 1; }
 
-.portal-step__item:nth-child(1)::before { background-image: url("./Create Account.png"); }
+.portal-step__item:nth-child(1)::before,
+.portal-step__item:not([class*='--'])::before { background-image: url("./Create Account.png"); }
 
 .portal-step__item:nth-child(2)::before { background-image: url("./Upload logo.png"); }
 
-.portal-step__item:nth-child(3)::before { background-image: url("./Download project.png"); }
+.portal-step__item:nth-child(3)::before { background-image: url("./Request service.png"); }
 
-.portal-step__item:nth-child(4)::before { background-image: url("./Request service.png"); }
+.portal-step__item:nth-child(4)::before { background-image: url("./Download project.png"); }
 
 .portal-step__item:nth-child(5)::before { background-image: url("./Download Project 2.png"); }
 
-.portal-step__number { position: absolute; top: 0.75rem; right: 0.75rem; left: auto; transform: none; z-index: 2; font-size: var(--font-size-4xl); font-family: var(--font-family-heading); font-weight: var(--font-weight-heading); color: rgb(255, 255, 255); line-height: 1; -webkit-text-stroke: 1px rgba(0,0,0,0.3); }
+/* Variant classes for use inside .portal-step__card wrappers */
+.portal-step__item--2::before { background-image: url("./Upload logo.png") !important; }
+.portal-step__item--3::before { background-image: url("./Request service.png") !important; }
+.portal-step__item--4::before { background-image: url("./Download project.png") !important; }
+.portal-step__item--5::before { background-image: url("./Download Project 2.png") !important; }
 
-.portal-steps__names-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--spacing-3xl); margin-top: var(--spacing-xl); background: transparent; }
+.portal-step__number { display: none !important; position: absolute; top: 0.75rem; right: 0.75rem; left: auto; transform: none; z-index: 2; font-size: var(--font-size-4xl); font-family: var(--font-family-heading); font-weight: var(--font-weight-heading); color: rgb(255, 255, 255); line-height: 1; -webkit-text-stroke: 1px rgba(0,0,0,0.3); }
+
+.portal-steps__names-row { display: none; }
 
 .portal-step__name { color: rgb(51, 0, 0); font-size: var(--font-size-lg); font-weight: 500; font-family: Montserrat, sans-serif; text-align: center; margin: 0px; }
 
